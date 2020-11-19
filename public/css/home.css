@@ -1,0 +1,52 @@
+.bg-darkblue{
+  background-color: #031520;
+}
+
+.bg-white{
+  background-color: #E3E6EA;
+}
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.title-container{
+  padding: 25px 0px 0px 50px;
+}
+
+.container-main-custome{
+  margin-top: 25px;
+  padding: 15px 15px 15px 15px;
+}
+
+.container-white-custome{
+  background-image: url(/image/the_grand_budapest_hotel_dark.jpg);
+
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  margin: 0;
+  padding: 0px 20px;
+}
+
+.container-movie-custome{
+  width: 100%;
+  padding: 50px 0px;
+}
+
+.btn-custom{
+  width: 100%;
+  margin: 0;
+}
+
+.card-custome{
+  width: 18vw; 
+  display:inline-block
+}
