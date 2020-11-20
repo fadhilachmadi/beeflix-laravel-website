@@ -16,13 +16,23 @@
   <header>
     @include('includes.header');
   </header>
+
+  <form class="form-inline"  method="get">
+    <div class="form-group">
+      <input type="text"
+        class="form-control" name="search" id="" placeholder="Search Here (title or genre)">
+        <button type="submit" class="btn bg-primaryDark">Search</button>
+    </div>
+  </form>
      
   <div class="container-fluid bg-secondary container-main-custome">
     <div class="container-white-custome bg-light">
       <div  class="container-movie-custome"  >
-        @foreach ($genres as $genre)
-          <h2 style="color: #EBCC2A">{{$genre->name}}</h2>
-          @foreach ($genre->movie as $movie1)
+        {{-- @foreach ($genres as $genre)
+          <h2 style="color: #EBCC2A">{{$genre->name}}</h2> --}}
+          {{-- @foreach ($genre->movie as $movie1) --}}
+          <h2 style="color: #EBCC2A">Daftar film</h2>
+          @foreach ($movies as $movie1)
             <div class="card card-custome">
 
               <img class="card-img-top" 
@@ -46,7 +56,7 @@
 
           <hr class="bg-white"/>
           
-        @endforeach
+        {{-- @endforeach --}}
       </div>
     </div>
   </div>

@@ -1,10 +1,20 @@
+body{
+  padding: 0px 0px 0px 50px;
+}
+
 .bg-darkblue{
   background-color: #031520;
+}
+
+.bg-primaryDark{
+  background-color: #245b8c;
+  color:  #E3E6EA;
 }
 
 .bg-white{
   background-color: #E3E6EA;
 }
+
 .arrow {
   border: solid white;
   border-width: 0 3px 3px 0;
@@ -18,7 +28,7 @@
 }
 
 .title-container{
-  padding: 25px 0px 0px 50px;
+  padding: 25px 0px 0px 0px;
 }
 
 .container-main-custome{
@@ -48,5 +58,6 @@
 
 .card-custome{
   width: 18vw; 
+  margin: 25px 0px;
   display:inline-block
 }

@@ -11,22 +11,26 @@ class MoviesController extends Controller
 {
 
     //
-    public function viewAllMovies(){
-        
-        $genres = Genre::all();
-        $movies = Movie::all();
-        $moviesDrama = Movie::all()->where('genre_id', 1);
-        $moviesKids = Movie::all()->where('genre_id', 2);
-        $moviesTvShow = Movie::all()->where('genre_id', 3);
- 
+    // public function viewAllMovies(){
 
-        return view('home')
-            ->with(compact('genres'))
-            ->with(compact('movies'))
-            ->with(compact('moviesDrama'))
-            ->with(compact('moviesKids'))
-            ->with(compact('moviesTvShow'));
-    }
+
+        function index(Request $request){
+
+           $search = $request->get('search');
+           $movies = Movie::where('title', 'like', '%'.$search.'%')
+                            ->orWhereHas('Genre', function ($query) use ($search){
+                                     $query->where("name", 'like', '%'.$search.'%'); })->get();
+
+           return view('home')
+           ->with(compact('movies'));
+        }
+        
+        // $movies = Movie::all();
+
+        // return view('home')
+        //     ->with(compact('genres'))
+        //     ->with(compact('movies'));
+    // }
 
     public function viewMovieDetail($title){
 
