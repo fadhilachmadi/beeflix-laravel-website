@@ -15,11 +15,11 @@ class CreateMoviesTable extends Migration
     {
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->foreignId('genre_id')->references('id')->on('genres');
-            $table->string('photo');
-            $table->string('description');
-            $table->integer('rating');
+            $table->string('title')->nullable();
+            $table->foreignId('genre_id')->references('id')->on('genres')->nullable();
+            $table->string('photo')->nullable();
+            $table->string('description')->nullable();
+            $table->integer('rating')->nullable();
             $table->timestamps();
         });
     }
