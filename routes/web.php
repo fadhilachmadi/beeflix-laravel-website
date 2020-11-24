@@ -13,25 +13,34 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', 'MoviesController@indexMember');
+Route::get('/admin', 'MoviesController@indexAdmin')->middleware('admin');
 
-Route::get('/', 'MoviesController@index');
-
-Route::get('/addMovie', 'MoviesController@goToAdd');
 
 Route::get('/movie/{title}', 'MoviesController@viewMovieDetail');
+Route::get('member/movie/{title}', 'MoviesController@viewMovieDetailMember');
 
 Route::get('/genre/{name}', 'MoviesController@viewMovieByGenre');
+
+Route::get('/addMovie', 'MoviesController@goToAdd');
 
 Route::post('/addEpisode', 'MoviesController@addMovie');
 
 Route::post('/createEpisode', 'EpisodesController@addEpisodes');
 
-Route::get('/update/{id}', 'MoviesController@goToUpdate');
+Route::get('/updateMovie/{id}', 'MoviesController@goToUpdate');
 
-Route::patch('/update/{id}', 'MoviesController@updateMovie');
+Route::patch('/updateMovie/{id}', 'MoviesController@updateMovie');
+
+Route::get('/episode/{id}', 'EpisodesController@goToUpdate');
+
+Route::patch('/updateEpisode/{id}', 'EpisodesController@updateEpisode');
 
 Route::delete('/delete/{id}', 'MoviesController@deleteMovie');
 
 
+Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');
 
+// Route::get('/menu', 'LoginController@redirectTo');

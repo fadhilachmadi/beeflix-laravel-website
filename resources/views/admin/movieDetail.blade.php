@@ -50,7 +50,9 @@
 
                                 <td class="text-white" >episode {{ $episode->episode }}</td>
                                 <td class="text-white" >{{ $episode->title }}</td>
-
+                                <td class="text-white" >     
+                                    <a  href="{{ url('episode/' . $episode->id) }}" class="btn btn-success">Edit</a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

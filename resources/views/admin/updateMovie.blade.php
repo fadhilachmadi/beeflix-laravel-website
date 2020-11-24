@@ -18,7 +18,7 @@
   </header>
 
   <div class="container mt-5" >
-    <form class="mb-4"  action="/update/{{$movie->id}}" method="POST" enctype="multipart/form-data">
+    <form class="mb-4"  action="/updateMovie/{{$movie->id}}" method="POST" enctype="multipart/form-data">
       @csrf
       @method('PATCH');
       <h1 class="text-center mb-4" style="color: white">Edit Film</h1>
@@ -46,7 +46,11 @@
         <label for="image" style="color: white">Choose Image</label>
         <input type="file"  class="form-control"  value="{{$movie->photo}}" name="movie_photo">
       </div>
-      <button type="submit" id="btn-submit" class="btn btn-primary mt-3">Ubah Film</button>
+      <button type="submit" name="button"  id="btn-submit" class="btn btn-primary mt-3" value="btnUpdateMovie">Submit</button>
+      {{-- <button type="submit"  name="button"  class="btn btn-success mt-3" value="btnUpdateEpisode">Ubah Episode</button> --}}
+    </form>
+    <form action="">
+     
     </form>
   </div>
 
