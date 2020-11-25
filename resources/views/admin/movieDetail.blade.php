@@ -12,9 +12,9 @@
 </head>
 
 <body class="bg-darkblue">
-    <header>
-        @include('includes.header');
-    </header>
+    
+    @include('headers.navbar_guest')
+    @include('headers.header')
 
 
     <div class="container-flud container-main-custom bg-secondary">

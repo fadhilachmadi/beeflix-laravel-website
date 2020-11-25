@@ -26,25 +26,7 @@
                 <img class="card-img-top" src="{{ $movie->photo }}" alt="Card image" style="width:100%; height:25vw">
                 <div class="card-body" style="padding: 15px 0px 0px 0px">
                     <h4 class="card-title" style="text-align: center">{{ $movie->title }}</h4>
-
-                    @if (Route::has('login'))
-                    <div class="top-right links">
-                      @auth
-                        @if (Auth::user()->email == 'admin@gmail.com')
-                          <a href="{{ url('movie/'.$movie->title) }}" class="btn btn-primary btn-custom">LIHAT FILM</a>
-            
-                        @else
-                          <a href="{{ url('member/movie/'.$movie->title) }}" class="btn btn-primary btn-custom">LIHAT FILM</a>
-            
-                        @endif
-            
-                        @else
-                          <a href="{{ url('member/movie/'.$movie->title) }}" class="btn btn-primary btn-custom">LIHAT FILM</a>
-                      @endauth
-                      
-                    </div>
-                  @endif
-                    
+                    <a href="{{ url('movie/'.$movie->title) }}" class="btn btn-primary btn-custom">LIHAT FILM</a>
                 </div>
             </div>
         @endforeach

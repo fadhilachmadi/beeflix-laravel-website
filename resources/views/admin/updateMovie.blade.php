@@ -13,9 +13,8 @@
 
 <body class="bg-darkblue">
 
-  <header>
-    @include('includes.header');
-  </header>
+  @include('headers.navbar_guest')
+  @include('headers.header')
 
   <div class="container mt-5" >
     <form class="mb-4"  action="/updateMovie/{{$movie->id}}" method="POST" enctype="multipart/form-data">

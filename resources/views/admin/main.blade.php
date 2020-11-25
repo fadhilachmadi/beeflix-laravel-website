@@ -19,26 +19,12 @@
 
   
 
-  @if (Route::has('login'))
-  <div class="top-right links">
-      @auth
-          <a href="{{ url('/home') }}">Home</a>
-      @else
-          <a href="{{ route('login') }}">Login</a>
 
-          @if (Route::has('register'))
-              <a href="{{ route('register') }}">Register</a>
-          @endif
-      @endauth
-  </div>
-@endif
 
-  <header>
-    @include('includes.header');
-  </header>
+  @include('headers.navbar_guest')
 
   <div>
-    <form class="form-inline"  method="get">
+    <form class="form-inline mt-4"  method="get">
       <div class="form-group">
         <input type="text"
           class="form-control" style="width: 10vw"  name="search" id="" placeholder="Search Here (title / genre)">

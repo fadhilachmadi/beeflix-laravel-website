@@ -14,9 +14,8 @@
 <body class="bg-darkblue">
 
 
-  <header>
-    @include('includes.header');
-  </header>
+  @include('headers.navbar_guest')
+  @include('headers.header')
 
 
 {{-- <div class="container mt-4 mb-4">
