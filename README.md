@@ -47,7 +47,7 @@
 <li>
     <h3>Website Authentication</h3>
     <p>Website BeeFlix juga memiliki implementasi konsep Authentication, dimana akan terdapat 3 kategori user, yaitu Admin, Member (non-admin), dan Guest(tidak login).
-    authentication ini dibuat karena adanya perbedaan kegiatan yang dapat dilakukan antara Admin dan Member/Guest</p>
+    authentication ini dibuat karena adanya perbedaan kegiatan yang dapat dilakukan antara Admin dan Member/Guest. Authentication dilakukan berdasarkan email dari pengguna. Apabila email dari pengguna adalah "admin@gmail.com" , maka pengguna tersebut terdaftar sebagai admin</p>
 </li>
 
 <li>
